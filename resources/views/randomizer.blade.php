@@ -10,7 +10,7 @@ new Vue({
 	el: '#root',
 	i18n: i18n,
 	store: cStore,
-	created: function created() {
+	created() {
 		this.$store.dispatch('getSprites');
 	},
 });

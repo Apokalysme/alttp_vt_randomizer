@@ -395,14 +395,11 @@ class ItemCollection extends Collection {
 	 * @return bool
 	 */
 	public function canFly() {
-		return $this->has('OcarinaActive') || $this->has('OcarinaInactive') && $this->canActivateOcarina();
-	}
-	
-	private function canActivateOcarina() {
-		if ($this->world instanceof World\Inverted) {
-			return $this->has('MoonPearl') && $this->world->getRegion('North West Light World')->canEnter([], $this);
+		if ($this->world instanceof World\Inverted
+			&& !($this->has('MoonPearl') && $this->world->getRegion('North West Light World')->canEnter([], $this))) {
+			return false;
 		}
-		return true;
+		return $this->has('OcarinaActive') || $this->has('OcarinaInactive');
 	}
 
 	/**

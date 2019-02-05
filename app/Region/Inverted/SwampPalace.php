@@ -27,15 +27,4 @@ class SwampPalace extends Region\Standard\SwampPalace {
 
 		return $this;
 	}
-
-	public function initOverworldGlitches() {
-		$this->initNoGlitches();
-
-		$this->can_enter = function($locations, $items) {
-			return $items->has('MagicMirror') && $items->has('Flippers')
-				&& $this->world->getRegion('South Light World')->canEnter($locations, $items);
-		};
-
-		return $this;
-	}
 }

@@ -25,7 +25,6 @@ export default {
 			'rom.timerMode': 'off',
 			'rom.timerStart': '',
 			'rom.rupeeBow': false,
-			'rom.genericKeys': false,
 			'spoil.BootsLocation': false,
 			'spoil.Hints': true,
 			'sprite.shuffleOverworldBonkPrizes': false,

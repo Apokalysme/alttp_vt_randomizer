@@ -17,8 +17,6 @@
 </template>
 
 <script>
-import EventBus from '../core/event-bus';
-
 export default {
 	props: {
 		navType: {default: 'pills'},
@@ -38,7 +36,6 @@ export default {
 		if (window.location.hash) {
 			this.selectTabHref(window.location.hash);
 		}
-		EventBus.$on('selectTabHref', this.selectTabHref);
 	},
 	methods: {
 		selectTab(selectedTab) {

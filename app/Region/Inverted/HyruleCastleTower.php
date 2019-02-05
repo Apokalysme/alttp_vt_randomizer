@@ -26,8 +26,4 @@ class HyruleCastleTower extends Region\Standard\HyruleCastleTower {
 
 		return $this;
 	}
-
-	public function initOverworldGlitches() {
-		return $this->initNoGlitches();
-	}
 }

@@ -128,19 +128,19 @@ class East extends Region {
 	 */
 	public function initOverworldGlitches() {
 		$this->locations["Hookshot Cave - Top Right"]->setRequirements(function($locations, $items) {
-			return $items->has('MoonPearl') && $items->has('Hookshot') && ($items->canLiftRocks() || $items->has('PegasusBoots'));
+			return $items->canLiftRocks() && $items->has('MoonPearl') && $items->has('Hookshot');
 		});
 
 		$this->locations["Hookshot Cave - Top Left"]->setRequirements(function($locations, $items) {
-			return $items->has('MoonPearl') && $items->has('Hookshot') && ($items->canLiftRocks() || $items->has('PegasusBoots'));
+			return $items->canLiftRocks() && $items->has('MoonPearl') && $items->has('Hookshot');
 		});
 
 		$this->locations["Hookshot Cave - Bottom Left"]->setRequirements(function($locations, $items) {
-			return $items->has('MoonPearl') && $items->has('Hookshot') && ($items->canLiftRocks() || $items->has('PegasusBoots'));
+			return $items->canLiftRocks() && $items->has('MoonPearl')  && $items->has('Hookshot');
 		});
 
 		$this->locations["Hookshot Cave - Bottom Right"]->setRequirements(function($locations, $items) {
-			return $items->has('MoonPearl') && ($items->has('PegasusBoots') || ($items->canLiftRocks() && $items->has('Hookshot')));
+			return $items->canLiftRocks() && $items->has('MoonPearl') && ($items->has('Hookshot') || $items->has('PegasusBoots'));
 		});
 
 		$this->can_enter = function($locations, $items) {

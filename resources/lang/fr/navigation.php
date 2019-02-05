@@ -19,8 +19,6 @@ return [
 	'races' => 'Parties organisées',
 	'updates' => 'Mises à jour',
 	'game_entrance' => 'Randomizer d’entrée',
-	'game_enemizer' => 'Enemizer',
-	'sprite_preview' => 'Sprite Options',
 	'contribute' => 'Contribuer',
 	'discord' => 'Rejoignez-nous sur Discord',
 	'report_issue' => 'Signaler un Problème',

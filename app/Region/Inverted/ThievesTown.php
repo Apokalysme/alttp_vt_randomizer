@@ -26,8 +26,4 @@ class ThievesTown extends Region\Standard\ThievesTown {
 
 		return $this;
 	}
-
-	public function initOverworldGlitches() {
-		return $this->initNoGlitches();
-	}
 }
